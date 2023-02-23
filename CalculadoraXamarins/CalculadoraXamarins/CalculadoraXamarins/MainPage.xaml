@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:CalculadoraXamarins.ViewModel"
+             x:Class="CalculadoraXamarins.MainPage">
+
+    <StackLayout BackgroundColor="#E0CBA8">
+        
+        
+        
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Bienvenidos a mi Calculadora" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" FontAttributes="Bold"/>
+        </Frame>
+
+        <Label Text="Ingrese el valor del número 1" TextColor="#32161F" FontSize="25" />
+        <Entry Placeholder="Ingrese aquí el valor" FontSize="20" BackgroundColor="White" TextColor="Black" Keyboard="Numeric" Text="{Binding Num1}"/>
+
+
+        <Label Text="Ingrese el valor del número 2" TextColor="#32161F" FontSize="25" />
+        <Entry Placeholder="Ingrese aquí el valor" FontSize="20" BackgroundColor="White" TextColor="Black" Keyboard="Numeric" Text="{Binding Num2}" />
+
+        <Button Text="Suma" Command="{Binding CrearExpresion}" CommandParameter="suma" HorizontalOptions="CenterAndExpand" WidthRequest="100"/>
+        <Button Text="Resta" Command="{Binding CrearExpresion}" CommandParameter="resta" HorizontalOptions="CenterAndExpand" WidthRequest="100" />
+
+        <Label Text="Resultado" TextColor="#32161F" FontSize="25" />
+        <Label Text="{Binding Prueba}" TextColor="#32161F" FontSize="25"></Label>
+
+
+    </StackLayout>
+
+
+</ContentPage>
